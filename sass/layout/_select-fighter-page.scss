@@ -1,0 +1,16 @@
+.select-fighters {
+    padding: 20px 30px;
+    background-image: url("../images/versus.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &__heading {
+        color: $text-color;
+        text-transform: uppercase;
+        font-family: $font;
+    }      
+}
+
+.fighters-list {
+    display: flex;
+}
