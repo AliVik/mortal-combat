@@ -1,3 +1,13 @@
+body {
+    background-image: url("../images/versus.png");
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+
+}
+
 ul,
 p,
 h1 {
@@ -6,5 +16,11 @@ h1 {
 }
 
 li {
-    text-decoration: none;
+    list-style: none;
 }
+
+/* header,
+footer {
+    padding: 30px 0;
+    background-color: #000;
+} */

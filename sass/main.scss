@@ -3,6 +3,10 @@
 @import './base/variables';
 @import './base/common-styles';
 
+/* UTILS */
+
+@import './utils/_textmixins.scss';
+
 /* LAYOUT */
 
 @import './layout/select-fighter-page';
