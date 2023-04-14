@@ -28,7 +28,21 @@ document.addEventListener('DOMContentLoaded', function () {
     duration: 2000,
   });
 
-  timeout = setTimeout(() => (window.location.href = './end.html'), 4000);
+  Swal.fire({
+    position: 'bottom-start',
+    icon: 'info',
+    title: 'Press "Q", "W", "E", "R", "T", "Y" to choose characteristics',
+    showConfirmButton: false,
+    timer: 2000,
+    toast: true,
+    background: 'gold',
+    color: 'black',
+    width: '400px',
+  });
+
+  timeout = setTimeout(() => {
+    window.location.href = './end.html';
+  }, 4000);
 });
 
 document.addEventListener('keydown', onQwertyContoller);
@@ -114,5 +128,6 @@ function onPictureChange() {
 
 function resetTimer() {
   clearTimeout(timeout);
+
   timeout = setTimeout(() => (window.location.href = './end.html'), 4000);
 }

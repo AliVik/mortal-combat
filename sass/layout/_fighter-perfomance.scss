@@ -25,9 +25,14 @@
     
     &__item {
         display: block;
-        width: 200px;
-        height: 250px;
+        width: 150px;
+        height: 200px;
         border-radius: 50%;
+
+        @media screen and (min-width:985px){
+            width: 200px;
+            height: 250px;
+        }
     }
 }
 
@@ -37,6 +42,7 @@
 
     &__item {
         margin: 0;
+        padding: 5px;
         border: 3px solid $iconsBorderColor;
         border-radius: 10px;
         background-color: $iconsBackgroundColor;
@@ -46,12 +52,14 @@
 
         &__img {
             display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            width: 84px;
+            height: 84px;
+            object-fit: contain;
         }
 
         &__figcapture {
+            margin-top: 3px;
+            white-space: nowrap;
             @include text(center, $textColor, lowercase, $font, 14px, 0, normal);
         }
     }

@@ -111,12 +111,8 @@ function onFightHeroPresentation() {
 function onOpponentChoice() {
   const randomNum = Math.floor(Math.random() * 6);
   const fightImagesArr = Object.values(fightImages);
-  console.log(Math.random());
 
   secondFighterWrapper.innerHTML = `<img src="${fightImagesArr[randomNum]}" class="fighters-presentation__img" alt="second fighter">`;
-  console.log('fightImagesArr[randomNum]', fightImagesArr[randomNum]);
-  console.log('randomNum', randomNum);
-  console.log('fightImagesArr', fightImagesArr);
   sessionStorage.setItem('chosenOpponent', fightImagesArr[randomNum]);
   spinner.style = 'display: none;';
 }
