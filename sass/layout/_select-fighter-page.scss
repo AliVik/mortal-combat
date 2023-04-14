@@ -1,11 +1,13 @@
 .select-fighters {
-    padding: 30px;
+    position: relative;
+    padding: 30px 10px;
+    height: 100%;
 
     &__heading {
         margin-bottom: 30px;
 
         @include text(center, $textColor, uppercase, $font, 300%, 5px, italic)
-    }  
+    } 
     
     &__zone-desc {
         margin-top: 20px;
@@ -14,12 +16,17 @@
     }
 }
 
+.fight-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .fighters-list {
     display: flex;
     justify-content: center;
     margin: auto;
     flex-wrap: wrap;
-    max-width: 800px;
+    max-width: 650px;
 
     &__item {
         margin: 0 10px 10px 0;
@@ -39,5 +46,71 @@
         width: 200px;
         height: 250px;
 
+    }
+}
+
+.fighters-presentation,
+.second-fighter {
+    position: absolute;
+
+    &__img {
+        display: block;
+        border-radius: 80%;
+    }
+}
+
+.lds-ellipsis {
+    position: absolute;
+}
+
+@media screen and (max-width: 979px) {
+    .fighters-presentation,
+    .second-fighter {
+        display: none;
+    }
+}
+        
+        
+@media screen and (min-width: 980px) and (max-width: 1129px) {
+    .fighters-presentation {
+        top: 30%;
+        right: 84%;
+    }
+
+    .second-fighter {
+        top: 30%;
+        left: 84%;
+    }
+
+    .lds-ellipsis {
+        top: 40%;
+        left: 84%;
+    }
+
+    .fighters-presentation__img {
+        height: 200px;
+        width: 167px;
+    }
+}
+        
+@media screen and (min-width: 1130px) {
+    .fighters-presentation {
+        top: 30%;
+        right: 80%;
+    }
+
+    .second-fighter {
+        top: 30%;
+        left: 80%;
+    }
+
+    .lds-ellipsis {
+        top: 40%;
+        left: 80%;
+    }
+
+    .fighters-presentation__img {
+        height: 250px;
+        width: 200px;
     }
 }

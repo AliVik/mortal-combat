@@ -1,0 +1,63 @@
+.fighters-perfomance {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 10px;
+    height: 100%;
+    overflow: hidden;
+
+    &__heading {
+        display: flex;
+        margin-bottom: 30px;
+        flex-direction: column;
+        
+        @include text(center, #f9880a, uppercase, $font, 600%, 5px, normal)
+    }
+}
+
+.fighters-perfomance-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    &__vs {
+        @include text(center, $textColor, uppercase, $font, 800%, 5px, italic)
+    }
+    
+    &__item {
+        display: block;
+        width: 200px;
+        height: 250px;
+        border-radius: 50%;
+    }
+}
+
+.characteristics-panel {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+        margin: 0;
+        border: 3px solid $iconsBorderColor;
+        border-radius: 10px;
+        background-color: $iconsBackgroundColor;
+        width: 100px;
+        height: 100px;
+        transition: transform 0.5s ease;
+
+        &__img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &__figcapture {
+            @include text(center, $textColor, lowercase, $font, 14px, 0, normal);
+        }
+    }
+
+    &__item:hover,
+    &__item:focus {
+        outline: none;
+    }
+}

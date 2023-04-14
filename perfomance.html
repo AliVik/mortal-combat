@@ -6,8 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fighter perfomance</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.min.css">
 </head>
 <body>
-    <h1>Perfomance</h1>
+    <section class="fighters-perfomance">
+        <h1 class="fighters-perfomance__heading">
+            <span class="perfomance-heading__item">Battle</span>
+            <span class="perfomance-heading__item">1</span>
+        </h1>
+        <div class="fighters-perfomance-wrapper">
+            <div class="fighters-perfomance-wrapper__left"></div>
+            <p class="fighters-perfomance-wrapper__vs">VS</p>
+            <div class="fighters-perfomance-wrapper__right"></div>
+        </div>
+        <div class="characteristics-panel">
+            <figure class="characteristics-panel__item" id="1" tabindex="0">
+                <img src="./images/stamina.png" class="characteristics-panel__item__img" alt="characteristics">
+                <figcaption class="characteristics-panel__item__figcapture">Выносливость</figcaption>
+            </figure>
+            <figure class="characteristics-panel__item" id="2" tabindex="0">
+                <img src="./images/stamina.png" class="characteristics-panel__item__img" alt="characteristics">
+                <figcaption class="characteristics-panel__item__figcapture">Выносливость</figcaption>
+            </figure>
+            <figure class="characteristics-panel__item" id="3" tabindex="0">
+                <img src="./images/stamina.png" class="characteristics-panel__item__img" alt="characteristics">
+                <figcaption class="characteristics-panel__item__figcapture">Выносливость</figcaption>
+            </figure>
+            <figure class="characteristics-panel__item" id="4" tabindex="0">
+                <img src="./images/stamina.png" class="characteristics-panel__item__img" alt="characteristics">
+                <figcaption class="characteristics-panel__item__figcapture">Выносливость</figcaption>
+            </figure>
+            <figure class="characteristics-panel__item" id="5" tabindex="0">
+                <img src="./images/stamina.png" class="characteristics-panel__item__img" alt="characteristics">
+                <figcaption class="characteristics-panel__item__figcapture">Выносливость</figcaption>
+            </figure>
+            <figure class="characteristics-panel__item" id="6" tabindex="0">
+                <img src="./images/stamina.png" class="characteristics-panel__item__img" alt="characteristics">
+                <figcaption class="characteristics-panel__item__figcapture">Выносливость</figcaption>
+            </figure>
+        </div>
+    </section>
+    <script src="./scripts/anime.min.js"></script>
+    <script type="module" src="js/perform_fighters.js"></script>
 </body>
 </html>

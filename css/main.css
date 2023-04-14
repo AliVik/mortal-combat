@@ -5,7 +5,7 @@ body {
   background-color: black;
   background-size: cover;
   background-position: center;
-  height: 100%;
+  height: 100vh;
 }
 
 ul,
@@ -24,10 +24,73 @@ footer {
     padding: 30px 0;
     background-color: #000;
 } */
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
 /* UTILS */
 /* LAYOUT */
 .select-fighters {
-  padding: 30px;
+  position: relative;
+  padding: 30px 10px;
+  height: 100%;
 }
 .select-fighters__heading {
   margin-bottom: 30px;
@@ -50,12 +113,17 @@ footer {
   font-style: italic;
 }
 
+.fight-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .fighters-list {
   display: flex;
   justify-content: center;
   margin: auto;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 650px;
 }
 .fighters-list__item {
   margin: 0 10px 10px 0;
@@ -69,4 +137,150 @@ footer {
   display: block;
   width: 200px;
   height: 250px;
+}
+
+.fighters-presentation,
+.second-fighter {
+  position: absolute;
+}
+.fighters-presentation__img,
+.second-fighter__img {
+  display: block;
+  border-radius: 80%;
+}
+
+.lds-ellipsis {
+  position: absolute;
+}
+
+@media screen and (max-width: 979px) {
+  .fighters-presentation,
+  .second-fighter {
+    display: none;
+  }
+}
+@media screen and (min-width: 980px) and (max-width: 1129px) {
+  .fighters-presentation {
+    top: 30%;
+    right: 84%;
+  }
+  .second-fighter {
+    top: 30%;
+    left: 84%;
+  }
+  .lds-ellipsis {
+    top: 40%;
+    left: 84%;
+  }
+  .fighters-presentation__img {
+    height: 200px;
+    width: 167px;
+  }
+}
+@media screen and (min-width: 1130px) {
+  .fighters-presentation {
+    top: 30%;
+    right: 80%;
+  }
+  .second-fighter {
+    top: 30%;
+    left: 80%;
+  }
+  .lds-ellipsis {
+    top: 40%;
+    left: 80%;
+  }
+  .fighters-presentation__img {
+    height: 250px;
+    width: 200px;
+  }
+}
+.fighters-perfomance {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 10px;
+  height: 100%;
+  overflow: hidden;
+}
+.fighters-perfomance__heading {
+  display: flex;
+  margin-bottom: 30px;
+  flex-direction: column;
+  text-align: center;
+  color: #f9880a;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+  font-size: 600%;
+  letter-spacing: 5px;
+  font-style: normal;
+}
+
+.fighters-perfomance-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.fighters-perfomance-wrapper__vs {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+  font-size: 800%;
+  letter-spacing: 5px;
+  font-style: italic;
+}
+.fighters-perfomance-wrapper__item {
+  display: block;
+  width: 200px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.characteristics-panel {
+  display: flex;
+  justify-content: center;
+}
+.characteristics-panel__item {
+  margin: 0;
+  border: 3px solid #4b4b4e;
+  border-radius: 10px;
+  background-color: orange;
+  width: 100px;
+  height: 100px;
+  transition: transform 0.5s ease;
+}
+.characteristics-panel__item__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.characteristics-panel__item__figcapture {
+  text-align: center;
+  color: #fff;
+  text-transform: lowercase;
+  font-family: "Bebas Neue", cursive;
+  font-size: 14px;
+  letter-spacing: 0;
+  font-style: normal;
+}
+.characteristics-panel__item:hover, .characteristics-panel__item:focus {
+  outline: none;
+}
+
+.end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+  height: 100%;
+}
+.end__text {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+  font-size: 800%;
+  letter-spacing: 5px;
+  font-style: italic;
 }/*# sourceMappingURL=main.css.map */

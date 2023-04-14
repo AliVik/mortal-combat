@@ -2,6 +2,7 @@
 
 @import './base/variables';
 @import './base/common-styles';
+@import "./base/_spinner.scss";
 
 /* UTILS */
 
@@ -11,3 +12,4 @@
 
 @import './layout/select-fighter-page';
 @import './layout/fighter-perfomance';
+@import './layout/_end.scss';

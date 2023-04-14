@@ -1,0 +1,12 @@
+.end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    height: 100%;
+        &__text {
+             @include text(center, $textColor, uppercase, $font, 800%, 5px, italic);
+            }
+}
+
+

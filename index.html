@@ -15,42 +15,47 @@
     <header></header>
     <section class="select-fighters">
         <h1 class="select-fighters__heading">Select your fighter</h1>
-        <ul class="fighters-list">
-            <li class="fighters-list__item" tabindex="0">
-                <!-- <a href="perfomance.html"> -->
-                    <img src="./images/gandalf.jpg" class="fighters-list__img" alt="gandalf">
-                <!-- </a> -->
-            </li>
-            <li class="fighters-list__item" tabindex="0">
-                <!-- <a href="perfomance.html"> -->
-                    <img src="./images/aragorn.jpg" class="fighters-list__img" alt="aragorn">
-                <!-- </a> -->
-            </li>
-            <li class="fighters-list__item" tabindex="0">
-                <!-- <a href="perfomance.html"> -->
-                    <img src="./images/gimli.jpg" class="fighters-list__img" alt="gimli">
-                <!-- </a> -->
-            </li>
-            <li class="fighters-list__item" tabindex="0">
-                <!-- <a href="perfomance.html"> -->
-                    <img src="./images/gollum.jpg" class="fighters-list__img" alt="gollum">
-                <!-- </a> -->
-            </li>
-            <li class="fighters-list__item" tabindex="0">
-                <!-- <a href="perfomance.html"> -->
-                    <img src="./images/legolas.jpg" class="fighters-list__img" alt="legolas">
-                <!-- </a> -->
-            </li>
-            <li class="fighters-list__item" tabindex="0">
-                <!-- <a href="perfomance.html"> -->
-                    <img src="./images/arwen.jpg" class="fighters-list__img" alt="arwen">
-                <!-- </a> -->
-            </li>
-        </ul>
+        <div class="fight-wrapper">
+            <div class="fighters-presentation"></div>
+            <ul class="fighters-list">
+                <li class="fighters-list__item" id="1" tabindex="0">
+                    <!-- <a href="perfomance.html"> -->
+                    <img src="./images/gandalf.jpg" name="gandalf" class="fighters-list__img" alt="gandalf">
+                    <!-- </a> -->
+                </li>
+                <li class="fighters-list__item" id="2" tabindex="0">
+                    <!-- <a href="perfomance.html"> -->
+                    <img src="./images/aragorn.jpg" name="aragorn" class="fighters-list__img" alt="aragorn">
+                    <!-- </a> -->
+                </li>
+                <li class="fighters-list__item" id="3" tabindex="0">
+                    <img src="./images/gimli.jpg" name="gimli" class="fighters-list__img" alt="gimli">
+                </li>
+                <li class="fighters-list__item" id="4" tabindex="0">
+                    <img src="./images/gollum.jpg" name="gollum" class="fighters-list__img" alt="gollum">
+                </li>
+                <li class="fighters-list__item" id="5" tabindex="0">
+                    <img src="./images/legolas.jpg" name="legolas" class="fighters-list__img" alt="legolas">
+                </li>
+                <li class="fighters-list__item" id="6" tabindex="0">
+                    <img src="./images/arwen.jpg" name="arwen" class="fighters-list__img" alt="arwen">
+                </li>
+            </ul>
+            <div class="second-fighter"></div>
+            <div class="lds-ellipsis" style="display: none;">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+       
+        
         <p class="select-fighters__zone-desc">Kombat zone: soul chamber</p>
         
     </section>
     <footer></footer>
-    <script type="module" src="./js/index.js"></script>
+    <script src="./scripts/sweetalert2.all.min.js"></script>
+    <script type="module" src="js/select_fighters.js"></script>
 </body>
 </html>
