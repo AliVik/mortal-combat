@@ -47,7 +47,7 @@ function onFighterAction(e) {
     sessionStorage.setItem('chosenFighter', getChosenHeroSrc(chosenHero));
     spinner.style = 'display: block;';
     setTimeout(() => onOpponentChoice(), 1000);
-    setTimeout(() => (window.location.href = '../perfomance.html'), 3000);
+    setTimeout(() => (window.location.href = 'perfomance.html'), 3000);
   }
 }
 
