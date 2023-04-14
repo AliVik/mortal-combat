@@ -1,6 +1,6 @@
 /* BASE */
 body {
-  background-image: url("../images/versus.png");
+  background-image: url("../images/versus.jpg");
   background-repeat: no-repeat;
   background-color: black;
   background-size: cover;
@@ -130,13 +130,11 @@ footer {
   border: 3px solid #c0c0c0;
   transition: transform 0.5s ease;
 }
+.fighters-list__item__img {
+  display: block;
+}
 .fighters-list__item:hover, .fighters-list__item:focus, .fighters-list__item.active {
   transform: scale(1.1);
-}
-.fighters-list__img {
-  display: block;
-  width: 200px;
-  height: 250px;
 }
 
 .fighters-presentation,
