@@ -87,7 +87,7 @@ function onPictureChange() {
 
   index === pictureArr.length - 1 ? (index = 0) : (index += 1);
 
-  let pictureCapture = pictureArr[index].replace(/^(\.\.\/images\/)|(\.png)$/g, '');
+  let pictureCapture = pictureArr[index].replace(/^(\.\/images\/)|(\.png)$/g, '');
 
   switch (pictureCapture) {
     case 'fightstyle':
