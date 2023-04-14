@@ -2,18 +2,18 @@ const fightersItems = document.querySelectorAll('.fighters-list__item');
 const spinner = document.querySelector('.lds-ellipsis');
 const secondFighterWrapper = document.querySelector('.second-fighter');
 const fightImages = {
-  fightGimli: '../images/fight_gimli.jpg',
-  fightAragorn: '../images/fight-aragorn.jpg',
-  fightArwen: '../images/fight-arwen.jpg',
-  fightGandalf: '../images/fight-gandalf.jpg',
-  fightGollum: '../images/fight-gollum.jpg',
-  fightLegolas: '../images/fight-legolas.jpg',
+  fightGimli: './images/fight_gimli.jpg',
+  fightAragorn: './images/fight-aragorn.jpg',
+  fightArwen: './images/fight-arwen.jpg',
+  fightGandalf: './images/fight-gandalf.jpg',
+  fightGollum: './images/fight-gollum.jpg',
+  fightLegolas: './images/fight-legolas.jpg',
 };
 
 document.addEventListener(
   'keydown',
   function () {
-    const audio = new Audio('../audio/lords.mp3');
+    const audio = new Audio('./audio/lords.mp3');
     audio.loop = true;
     audio.volume = 0.1;
     audio.play();

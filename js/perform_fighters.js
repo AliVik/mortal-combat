@@ -3,12 +3,12 @@ const chosenOpponentWrapper = document.querySelector('.fighters-perfomance-wrapp
 const chosenFighter = sessionStorage.getItem('chosenFighter');
 const chosenOpponent = sessionStorage.getItem('chosenOpponent');
 const characteristicsIcon = {
-  combo: '../images/combo.png',
-  fightstyle: '../images/fightstyle.png',
-  health: '../images/health.png',
-  protection: '../images/protection.png',
-  speed: '../images/speed.png',
-  stamina: '../images/stamina.png',
+  combo: './images/combo.png',
+  fightstyle: './images/fightstyle.png',
+  health: './images/health.png',
+  protection: './images/protection.png',
+  speed: './images/speed.png',
+  stamina: './images/stamina.png',
 };
 
 let index = 0;
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
   chosenFighterWrapper.innerHTML = `<img src="${chosenFighter}" class="fighters-perfomance-wrapper__item" alt="fighter">`;
   chosenOpponentWrapper.innerHTML = `<img src="${chosenOpponent}" class="fighters-perfomance-wrapper__item" alt="fighter">`;
 
-  const audio = new Audio('../audio/versus.mp3');
+  const audio = new Audio('./audio/versus.mp3');
   audio.volume = 0.1;
   audio.play();
 
@@ -28,13 +28,13 @@ document.addEventListener('DOMContentLoaded', function () {
     duration: 2000,
   });
 
-  timeout = setTimeout(() => (window.location.href = '../end.html'), 4000);
+  timeout = setTimeout(() => (window.location.href = './end.html'), 4000);
 });
 
 document.addEventListener('keydown', onQwertyContoller);
 document.addEventListener('keydown', resetTimer);
 document.addEventListener('keydown', function () {
-  const audio = new Audio('../audio/click.wav');
+  const audio = new Audio('./audio/click.wav');
   audio.volume = 0.5;
   audio.play();
 });
@@ -114,5 +114,5 @@ function onPictureChange() {
 
 function resetTimer() {
   clearTimeout(timeout);
-  timeout = setTimeout(() => (window.location.href = '../end.html'), 4000);
+  timeout = setTimeout(() => (window.location.href = './end.html'), 4000);
 }
