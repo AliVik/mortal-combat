@@ -276,6 +276,8 @@ footer {
   height: 100%;
 }
 .end__text {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   color: #fff;
   text-transform: uppercase;

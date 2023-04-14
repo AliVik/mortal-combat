@@ -10,6 +10,17 @@ const fightImages = {
   fightLegolas: '../images/fight-legolas.jpg',
 };
 
+document.addEventListener(
+  'keydown',
+  function () {
+    const audio = new Audio('../audio/lords.mp3');
+    audio.loop = true;
+    audio.volume = 0.1;
+    audio.play();
+    setInterval(() => (audio.volume += 0.01), 1000);
+  },
+  { once: true },
+);
 document.addEventListener('keydown', onFighterAction);
 
 let index = 0;
@@ -36,7 +47,7 @@ function onFighterAction(e) {
     sessionStorage.setItem('chosenFighter', getChosenHeroSrc(chosenHero));
     spinner.style = 'display: block;';
     setTimeout(() => onOpponentChoice(), 1000);
-    setTimeout(() => (window.location.href = '../perfomance.html'), 5000);
+    setTimeout(() => (window.location.href = '../perfomance.html'), 3000);
   }
 }
 
@@ -98,10 +109,14 @@ function onFightHeroPresentation() {
 }
 
 function onOpponentChoice() {
-  const randomNum = Math.floor(Math.random() * 6) + 1;
+  const randomNum = Math.floor(Math.random() * 6);
   const fightImagesArr = Object.values(fightImages);
+  console.log(Math.random());
 
   secondFighterWrapper.innerHTML = `<img src="${fightImagesArr[randomNum]}" class="fighters-presentation__img" alt="second fighter">`;
+  console.log('fightImagesArr[randomNum]', fightImagesArr[randomNum]);
+  console.log('randomNum', randomNum);
+  console.log('fightImagesArr', fightImagesArr);
   sessionStorage.setItem('chosenOpponent', fightImagesArr[randomNum]);
   spinner.style = 'display: none;';
 }

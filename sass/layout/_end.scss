@@ -5,6 +5,8 @@
     padding: 30px 10px;
     height: 100%;
         &__text {
+            display: flex;
+            flex-direction: column;
              @include text(center, $textColor, uppercase, $font, 800%, 5px, italic);
             }
 }

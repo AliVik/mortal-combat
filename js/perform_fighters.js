@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
   chosenFighterWrapper.innerHTML = `<img src="${chosenFighter}" class="fighters-perfomance-wrapper__item" alt="fighter">`;
   chosenOpponentWrapper.innerHTML = `<img src="${chosenOpponent}" class="fighters-perfomance-wrapper__item" alt="fighter">`;
 
+  const audio = new Audio('../audio/versus.mp3');
+  audio.volume = 0.1;
+  audio.play();
+
   anime({
     targets: '.fighters-perfomance-wrapper__item',
     scale: 2,
@@ -29,11 +33,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('keydown', onQwertyContoller);
 document.addEventListener('keydown', resetTimer);
+document.addEventListener('keydown', function () {
+  const audio = new Audio('../audio/click.wav');
+  audio.volume = 0.5;
+  audio.play();
+});
 
 function onQwertyContoller(e) {
   const { src, capture } = onPictureChange();
-  console.log(src, capture);
-  console.log(e.keyCode);
 
   switch (e.keyCode) {
     case 81:
